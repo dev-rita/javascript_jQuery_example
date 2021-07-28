@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function fru(fr){
+	//fr은 폼을 가리킴
+	var result="";//let result로도 할 수 있음
+	
+	if(fr.a1.checked == true){
+		result="사과";
+	}
+	
+	if(fr.a2.checked == true){
+		result+="\n복숭아";//\n은 줄바꿈
+	}
+	
+	if(fr.a3.checked == true){
+		result+="\n바나나";
+	}
+	
+	if(fr.a4.checked){//==true가 생략됨.
+		result+="\n참외";
+	}
+	
+	alert(result);
+}
+</script>
+</head>
+<body>
+<form name="f">
+<h3>좋아하는 과일은?</h3>
+<input type="checkbox" name="a1" checked/>사과<br/><!-- checked속성을 사용하면 미리 선택됨. -->
+<input type="checkbox" name="a2"/>복숭아<br/>
+<input type="checkbox" name="a3"/>바나나<br/>
+<input type="checkbox" name="a4"/>참외<br/>
+<input type="button" value="확인" onclick="fru(this.form);"/>
+<input type="reset" value="취소" />
+</form>
+</body>
+</html>

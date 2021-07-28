@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+function Car(model,speed,color){
+	this.model=model;//왼쪽의 model은 Car의 속성, 오른쪽 model은 매개변수
+	this.speed=speed;
+	this.color=color;
+	
+	this.brake=function(){
+		this.speed-=10;
+	}//메소드 정의
+	
+	this.accel=function(){
+		this.speed+=10;
+	}
+}//생성자 함수 정의
+
+var myCar = new Car("BMW",60,'red');//myCar객체 생성
+document.write("모델"+myCar.model+", 속도:"+myCar.speed+", 색상:"+myCar.color+"<br/>");
+
+myCar.accel();//메소드 호출
+document.write("차속도:"+myCar.speed+"<br/>");
+
+myCar.brake();myCar.brake();
+document.write("차속도:"+myCar.speed+"<br/>");
+</script>
+</body>
+</html>

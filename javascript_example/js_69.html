@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function check(){
+	var a=document.myform.irum.value;//document.은 생략 가능함
+	var b=myform.phone.value;
+	s01=a.length;//이름 길이
+	s02=b.length;
+	
+	if(s01<=0){//이름 길이가 0이거나 0보다 작으면
+		alert('이름을 입력하세요!');
+		myform.irum.focus();//이름 입력필드로 포커스 이동
+		return false;
+	}else{
+		alert("당신의 이름은 \""+a+"\"입니다.");
+	}
+	
+	if(s02==0){
+		alert('폰 번호를 입력하세요!');
+		myform.phone.focus();
+		return false;
+	}else{
+		alert("당신의 번호는 \""+b+"\" 입니다.");
+	}
+}
+</script>
+</head>
+<body>
+<form name="myform">
+이름:<input type="text" name="irum" size="14"/><br/><br/>
+폰번호:<input type="tel" name="phone" size="24"/><br/><br/>
+<input type="button" value="확인" onclick="check();"/>
+<input type="reset" value="취소" onclick="myform.irum.focus();"/>
+<!--  myform.irum.focus()는 이름 입력필드로 포커스가 이동 -->
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+var myCar={make:"BMW", model:"X5",year:2021};//myCar객체를 생ㄷ성, make, model, year속성을 정의
+
+var result="";
+/*
+ *for in 루프 반복문 형식)
+ *for(변수 in 객체명){//객체명으로 부터 속성을 하나씩 가져와서 변수에 저장한 다음 반복한다.
+	 문장;
+ }
+ */
+for(var x in myCar){//for in 루프 반복문
+	//myCar객체로 부터 속성을 가져와서 x변수에 저장
+	alert(x);
+	result+=myCar[x]+"<br/>";
+}
+document.write(result);
+</script>
+</body>
+</html>

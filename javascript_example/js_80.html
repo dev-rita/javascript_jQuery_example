@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function search(f){
+	location=f.site.options[f.site.selectedIndex].value;
+	//selectedIndex속성은 선택된 항목번호를 반환한다. 첫 항목은 0부터 시작
+	//자바스크립트 location 객체는 원하는 주소 또는 파일로 이동
+}
+</script>
+</head>
+<body>
+<form>
+<h3>검색 사이트를 선택</h3>
+<select name="site" onchange="search(this.form);">
+<option value="http://www.google.co.kr">구글</option>
+<option value="http://www.naver.com">네이버</option>
+<option value="http://www.daum.net">한메일</option>
+</select>
+</form>
+</body>
+</html>

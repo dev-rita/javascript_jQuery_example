@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+function printArray(a){
+	document.write("[");
+	for(var i=0;i<a.length;i++){
+		document.write(a[i]+" ");
+	}
+	document.write("]<br/>");
+}
+
+var myArr=new Array('seoul','busan');
+var fruitsArr=["사과","바나나","복숭아"];
+
+printArray(myArr);
+printArray(fruitsArr);
+</script>
+</body>
+</html>

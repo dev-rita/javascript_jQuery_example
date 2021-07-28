@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+function checkLength(id,min,max){
+	var id_length=id.value;//아이디를 저장 id.value.length가 id의 문자열 길이를 뜻한다.
+	
+	if(id_length.length>=min && id_length.length<=max){
+		alert("유효한 아이디입니다.");
+		return true;
+	}else{
+		alert("현재 아이디는 "+id_length.length+"자 입니다."+min+"자 이상"+max+"자 이하로 아이디를 입력하세요!");
+		id.focus();
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<form>
+아이디(6~8 문자):<input type="text" id="id2" size="14" />
+<input type="button" value="유효성 길이 검증" onclick="checkLength(document.getElementById('id2'),6,8);"/>
+</form>
+</body>
+</html>

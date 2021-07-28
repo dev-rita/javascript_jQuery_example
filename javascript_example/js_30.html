@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function add(a,b){
+	var sum=0;//지역변수(local value)로 add(){}블록 내에서만 사용 가능하다.
+	
+	sum=a+b;
+	return sum;
+}
+var result=add(10,20);
+document.write("10+20="+result+"<hr/>");
+//document.write(sum); 지역변수로 에러
+
+var sum2=0;//전역변수로 함수 안/밖에서 모두 사용 가능하다.
+function add2(a,b){
+	sum2=a+b;
+	return sum2;
+}
+
+add2(100,20);
+document.write(sum2);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폼 유효성 검증</title>
+<script>
+function checkNotEmpty(field){
+	if(field.value.length==0){//문자열에 내용이 없으면
+		//length는 문자열길이. 첫 문자는 1부터 시작.
+		alert('이름을 입력하세요!');
+		field.focus();//이름 입력필드로 포커스 이동
+		return false;//폼 전송을 안함.
+	}else if(field.value.indexOf(" ")>-1){
+		alert('공백을 제거하세요!');
+		field.focus();//이름 입력필드로 포커스 이동
+		return false;//폼 전송을 안함.
+	}
+	return true;//폼 전송
+}
+</script>
+</head>
+<body>
+<form>
+이름:<input type="text" id="user" size="14"/>
+<input type="button" value="확인" onclick="checkNotEmpty(document.getElementById('user'));"/>
+</form>
+</body>
+</html>

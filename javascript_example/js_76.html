@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function check(f){
+count=f.a.length;//radio객체수	
+alert(count);
+
+for(i=0;i<count;i++){
+	if(f.a[i].checked){//==true가 생략됨
+		alert(f.a[i].value+"를 좋아하는 군요.");
+	}
+}
+}
+</script>
+</head>
+<body>
+<form>
+<h3>가장 좋아하는 운동은?</h3>
+<input type="radio" name="a" value="축구" />축구
+<input type="radio" name="a" value="배구" />배구
+<input type="radio" name="a" value="농구" />농구
+<input type="radio" name="a" value="야구" />야구
+<hr/>
+<input type="button" value="확인" onclick="check(this.form);"/>
+<input type="reset" value="취소"/>
+</form>
+</body>
+</html>

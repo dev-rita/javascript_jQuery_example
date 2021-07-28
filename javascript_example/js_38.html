@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String 내장 객체</title>
+</head>
+<body>
+<script>
+cityName="서울시";
+document.write(cityName.length+"<br/>");//문자열 길이. 첫문자를  1부터 시작.
+
+var a="javascript";
+document.write("'a'문자 위치 번호?"+a.indexOf('a')+"<br/>"+a.lastIndexOf('a'));
+//indexOf('a')메소드는 'a'문자를 맨 왼쪽에서 부터 찾아서 가장 먼저 나오는 문자 위치번호를 반환. 첫 문자를 0부터 시작
+//lastIndexOf('a')메소드는 'a'문자를 맨 오른쪽에서 부터 찾아서 가장 먼저 나오는 문자 위치번호를 반환.
+
+document.write(a.substring(2,4)+"<hr/>");
+document.write(a.substring(2)+"<hr/>");//첫 문자를 0부터 시작하고 2이후 부터 마지막 문자까지 반환
+</script>
+</body>
+</html>

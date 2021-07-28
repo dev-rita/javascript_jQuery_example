@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function calc(){//function 예약어로 함수명을 정의
+	var x=document.getElementById('x').value;//id가 x인 요소값을 가져온다.
+	var y=document.getElementById('y').value;//입력필드에 입력한 숫자도 문자로 인식된다.
+	var sum=parseInt(x)+parseInt(y);//parseInt()내장함수로 정수숫자로 변경한다.
+	
+	document.getElementById('sum').value=sum;//덧셈 계산 결과값을 id가 sum인 요소값에 저장한다. NaN은 Not A Number.
+}
+</script>
+</head>
+<body>
+<h3>덧셈 계산기</h3>
+<form>
+첫 번째 점수: <input type="text" id="x" size="10"/> <br/><br/><!-- br태그를 두번 사용하면 두줄 줄 바꿈한다. -->
+두 번째 점수: <input type="text" id="y" size="10"/> <br/><br/>
+합계: <input type="text" id="sum" size="14"/> <br/><br/>
+<input type="button" value="계산" onclick="calc();"/>
+
+</form>
+</body>
+</html>

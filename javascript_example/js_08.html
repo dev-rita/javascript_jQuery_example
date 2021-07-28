@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>증감 연산자</title>
+</head>
+<body>
+<script>
+var x=10;
+y=++x;//선행증가
+document.write("x="+x+", y="+y+"<br/>");
+
+x=10;
+y=x++;//후행증가. 먼저 10을 y변수에 저장하고 나중에 후행증가
+document.write("x="+x+", y="+y+"<br/>"+"<hr/>");
+
+x=10;
+document.write(++x +"<hr/>");//먼저 1증가 x=11
+
+x=10;
+document.write(x++ +"<hr/>");//먼저 10을 출력하고 나중에 1 증가
+alert(x);//11;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function stop(){
+	clearTimeout(a);//동작하는 시간값을 해제
+}
+
+colorArray=new Array('blue','pink','green','gray','skyblue','black');
+
+function change(){
+	t=new Date();
+	s=t.getSeconds();
+	na=s%6;
+	document.bgColor=colorArray[na];//배경색이 적용
+	a=setTimeout('change()',1000);//1초마다 바뀜
+}
+</script>
+</head>
+<body>
+<h3>화면 배경색이 변경됩니다.</h3>
+<input type="button" value="배경색 변경" onclick="change();"/>
+<input type="button" value="중지" onclick="stop()"/>
+</body>
+</html>

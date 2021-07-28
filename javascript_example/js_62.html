@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function onButtonDown(btn){
+	btn.style.color="#f00";//버튼 색상 
+}
+
+function onButtonUp(btn){
+	btn.style.color="#000";//버튼 색상
+}
+</script>
+</head>
+<body>
+<button onmousedown="onButtonDown(this);" onmouseup="onButtonUp(this);">눌러보세요.</button>
+<!-- this는 button을 가리킨다. -->
+</body>
+</html>

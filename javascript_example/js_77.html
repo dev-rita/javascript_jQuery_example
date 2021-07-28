@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function view(f){
+	var i=f.san.selectedIndex;//선택된 메뉴 항목번호를 반환. 첫 항목이 0
+	alert(i);
+	alert(f.san.options[i].value+"를 선택했군요!");
+}
+</script>
+</head>
+<body>
+<form>
+<h3>좋아하는 산은?</h3>
+<select name="san">
+<option value="지리산">지리산</option>
+<option value="한라산">한라산</option>
+<option value="설악산">설악산</option>
+<option value="내장산">내장산</option>
+</select>
+<hr/>
+<input type="button" value="확인" onclick="view(this.form);"/>
+</form>
+</body>
+</html>

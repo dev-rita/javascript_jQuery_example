@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+var str,n,i;//전역변수
+
+function scro(){
+	str="뉴스 속보를 알려드리겠습니다. 내일부터 본격적인 장마가 시작되어서 많은 비가 올 예정입니다.";
+	i=0;
+	n=str.length;
+	scro2();
+}
+
+function scro2(){
+	myform.box.value=str.substring(0,i);//0이상 i미만 사이의 문자 반환한 후 입력필드에 대입
+	++i;	
+	if(i>n){
+		i=0;
+	}
+	setTimeout("scro2()",100);
+}
+//validate >>제대로 된 데이터인지 유효성검증 
+</script>
+</head>
+<body onLoad="scro();">
+<form name='myform'>
+<input type="text" name="box" size="100"/>
+</form>
+</body>
+</html>

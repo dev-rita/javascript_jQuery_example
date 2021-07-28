@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<form name="myForm">
+입력1:<input type="text" name="a0" size="14"/> <br/><br/>
+입력2:<input type="text" name="a1" size="14"/> <br/><br/>
+입력3:<input type="text" name="a2" size="14"/> <br/><br/>
+<input type="button" value="초기화" onclick="init();"/> 
+</form>
+
+<script>
+function init(){
+	for (var i=0;i<3;i++){
+		document.myForm["a"+i].value=i;
+		//myForm배열명 형태로 사용되고, a0,a1,a2 text 네임 속성명이 키이름으로 사용된 연관 배열 형식이다.
+		//입력박스에 0,1,2 값이 대입된다.
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function process(){
+	var obj=document.myform.text1;
+	alert(obj.value);
+}
+</script>
+</head>
+<body>
+<form name="myform">
+이름:<input type="text" name="text1" size="14"/>
+<input type="submit" value="제출" onclick="process();"/>
+</form>
+</body>
+</html>

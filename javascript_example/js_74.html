@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function ch(r){
+	//r은 radio를 가리킴
+	document.bgColor=r.value;//bgColor속성은 배경색을 설정
+}
+</script>
+</head>
+<body>
+<h3>배경색 변경</h3>
+<input type="radio" name="a" value="red" onclick="ch(this);"/>빨강색<!-- this는 radio를 자기 자신을 가리킴 -->
+<input type="radio" name="a" value="yellow" onclick="ch(this);"/>노랑색
+<input type="radio" name="a" value="gray" onclick="ch(this);"/>회색
+</body>
+</html>

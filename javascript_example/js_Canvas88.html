@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<canvas id="my" width="600" height="600"></canvas>
+<script>
+var canvas=document.getElementById('my');
+var context=canvas.getContext('2d');
+
+var image=new Image();//이미지 객체 생성
+image.src="../Images/main_img1.jpg";//그림 경로 설정 ..은 상위 .은 현재폴더?
+image.onload=function(){
+	var pattern=context.createPattern(image,'repeat');//패턴 객체 생성, repeat 기본값 옵션은 x,y축 모두 반복
+	context.rect(0,0,canvas.width,canvas.height);//사각형을 그린다.
+	context.fillStyle=pattern;//채우기로 패턴을 설정.
+	context.fill();
+};//익명함수로 이미지로드 실행
+</script>
+</body>
+</html>

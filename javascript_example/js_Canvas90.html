@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<canvas id="my" width="600" height="400"></canvas>
+<script>
+var canvas=document.getElementById('my');
+var context=canvas.getContext('2d');
+
+context.fillStyle="blue";//채우기 색 파랑
+context.fillRect(0,0,100,100);
+
+context.translate(50,50);//x,y방향 각각 50씩 이동
+context.fillStyle="red";
+context.fillRect(0,0,100,100);
+</script>
+</body>
+</html>

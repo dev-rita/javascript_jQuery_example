@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+//break문과 for반복문을 사용해서 1부터 10까지 10번을 반복, 4이후는 반복 안하고 1,2,3만 출력한다.
+//그리고 for반복문으로 1부터 10까지 반복, continue문을 사용하여 4만 빼고 나머지는 모두 반복
+
+for(i=1; i<=10;i++){
+	if(i>=4) break;
+	document.write(i);
+}
+
+document.write("<hr/>");
+
+for(i=1; i<=10;i++){
+	if(i==4) continue;
+	document.write(i);
+}
+	
+</script>
+</head>
+<body>
+</body>
+</html>

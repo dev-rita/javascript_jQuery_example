@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<canvas id="my" width="300" height="300"></canvas>
+<script>
+var canvas=document.getElementById('my');
+var ctx=canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.rect(10,10,100,100);
+ctx.fillStyle="yellow";//채우기 색으로 노랑설정
+ctx.fill();//채우기 색으로 사각형을 그릴때 fill()메소드 호출.
+
+</script>
+</body>
+</html>

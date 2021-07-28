@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function check(p,msg){
+	var exp=/^[0-9]+$/;//정규 표현식. ^은 시작, $는 문자의 끝, [0-9]는 0부터 9까지 중의 하나를 의미, +는 한 번 이상 반복, 결국 숫자만 입력하게 하는 정규표현식
+	
+	if(p.value.match(exp)){//정규표현식 검증
+		return true;
+	}else{
+		alert(msg);
+		p.focus();
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<form>
+폰번호(-없이 입력):<input type="text" id="phone" size="20"/>
+<input type="button" value="확인" onclick="check(document.getElementById('phone'),'숫자만 입력하세요!');"/>
+
+</form>
+</body>
+</html>

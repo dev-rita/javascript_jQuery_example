@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function reply(f){
+	//f는 폼을 가리킨다.
+	var a=f.aa.value;
+	b=a.toLowerCase();//영문 소문자로 변경해서 저장시킴.
+	
+	if(b=='c'){
+		alert("맞습니다.");
+	}else{
+		alert('다른 분을 선택하세요.');
+		f.aa.focus;//입력필드로 포커스 이동
+		f.aa.select();//문자를 선택
+	}
+}
+</script>
+</head>
+<body>
+<form>
+<h3>다음 선생님중에서 제일 멋있는 사람은?</h3>
+A)홍길동 B)이순신 C)신사임당 D)세종대왕
+<br/><br/>
+<input type="text" name="aa" size="10"/>
+<input type="button" value="확인" onclick="reply(this.form);"/><!-- this.form은 폼을 가리킨다. -->
+</form>
+</body>
+</html>

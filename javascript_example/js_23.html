@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+var fruits=['apple','banana','peach'];//배열 원소를 초기화 하면서 fruits 배열을 생성
+//자바스크립트 배열은 자료형이 달라도 저장 가능하다.
+document.write('fruits 배열원소 개수(크기): '+fruits.length+"<hr/>");
+
+for(i=0;i<fruits.length;i++){
+	alert(fruits[i]);
+}
+
+var cityName=new Array();//배열 객체. 자바스크립트에는 클래스가 없다.
+cityName[0]="서울시";
+cityName[1]="부산시";
+cityName[2]="인천시";
+
+for(i=0;i<cityName.length;i++){//자바스크립트에는 향상 for문 없다.
+	document.write(cityName[i]+"<br/>");
+}
+document.write("<hr/>");
+</script>
+</body>
+</html>

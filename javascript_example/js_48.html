@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+var solution=53;
+
+function test(){
+	try{
+		var x=document.getElementById('number').value;
+		
+		if(x=="")throw "입력 없음";//throw인위적 예외 발생
+		if(isNaN(x)) throw "숫자가 아님";//isNaN은 Not a Number의 약어로 숫자가 아니면 참
+		if(x>solution) throw "너무 큼";
+		if(x<solution) throw "너무 작음";
+		if(x==solution) throw "성공";
+	}catch(error){
+		var y=document.getElementById('message');
+		
+		y.innerHTML="힌트:"+error;//innerHTML속성은 message 아이디 영역에 문자와 태그를 함께 변경 적용
+		
+	}
+}
+</script>
+</head>
+<body>
+<form>
+<h1>숫자 추측</h1>
+<p>1부터 100사이의 숫자를 입력하시오.</p>
+<input type="text" id="number" size="14"/>
+<input type="button" value="숫자 추측" onclick="test();"/>
+<p id="message"></p>
+</form>
+</body>
+</html>

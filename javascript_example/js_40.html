@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function checkID(){
+	var id_length=document.getElementById("id").value;//아이디 값을 가져옴
+	
+	if(id_length.length<6){
+		//length속성은 아이디 길이를 반환. 첫 문자는 1부터 시작.
+		alert('아이디는 6자 이상이어야 합니다!');
+	}
+}
+</script>
+</head>
+<body>
+<form method="post" action="#">
+아이디:<input type="text" id="id" size="18"/>
+<input type="button" value="ID길이 검증" onclick="checkID();"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="300"></canvas>
+<script>
+var canvas=document.getElementById('myCanvas');
+var context=canvas.getContext('2d');
+
+context.beginPath();
+context.rect(10,10,100,100);//x,y좌표가 각각 10, 너비가 100, 높이가 100인 사각형을 그린다.
+context.rect(50,50,100,100);
+context.stroke();
+</script>
+</body>
+</html>

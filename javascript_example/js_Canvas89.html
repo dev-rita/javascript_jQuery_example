@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="400"></canvas>
+<script>
+var canvas=document.getElementById('myCanvas');
+var ctx=canvas.getContext('2d');
+
+var image=new Image();
+image.src="../Images/main_img1.jpg";
+image.onload=function(){
+	ctx.drawImage(image,0,0);
+};//익명함수로 이미지로드
+</script>
+</body>
+</html>

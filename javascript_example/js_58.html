@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function changeColor(color){
+	document.getElementById('content').style.backgroundColor=color;//content본문 영역 배경색을 적용
+}
+</script>
+</head>
+<body id="content">
+<form>
+<input type="radio" name="c01" onclick="changeColor('lightblue');"/>파랑색
+<input type="radio" name="c01" onclick="changeColor('red')"/>빨강색
+</form>
+</body>
+</html>

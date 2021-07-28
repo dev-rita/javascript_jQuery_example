@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function ch(f){
+	var count=f.color.length;//옵션 개수
+	alert(count);
+	
+	for(i=0;i<count;i++){
+		if(f.color.options[i].selected == true){//미리 선택되었다면 참, ==true는 생략 가능함
+			document.bgColor=f.color.options[i].value;
+		}
+	}
+}
+</script>
+</head>
+<body>
+<form>
+<h3>색상을 선택하세요.</h3>
+<select name="color">
+<option value="red">빨강</option>
+<option value="yellow">노랑</option>
+<option value="black">검정</option>
+<option value="gray">회색</option>
+<option value="orange">오렌지</option>
+</select>
+<hr/>
+<input type="button" value="확인" onclick="ch(this.form);"/>
+</form>
+</body>
+</html>

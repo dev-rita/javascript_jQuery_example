@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+//prompt()내장함수를 활용해서 100이하 정수숫자만 입력하는 입력박스 창을 띄운다.
+//parseInt()내장함수로 정수숫자로 변경하고, if else문으로 100보다 큰 숫자이면 
+//100이하 정수숫자값만 입력하세요 라는 경고메시지를 띄우고,
+//100이하 숫자를 입력한 경우는 for반복문을 사용하여 1부터 입력한 숫자만큼의 누적합을 구하시오.
+
+var input=prompt("100이하 정수 숫자만 입력>>","100이하 정수 숫자만 입력");
+var x=parseInt(input);
+
+var number=prompt("100이하 정수 숫자만 입력>>","100이하 정수 숫자만 입력");
+number=parseInt(number);
+document.write(number);
+
+if(x>100) alert("100이하 정수 숫자값만 입력하세요.");
+else if(x<=100){
+	var sum=0;
+	for(var i=1; i<=x;i++){
+		sum+=i;
+	}
+	alert("1부터"+x+"까지의 누적합:"+sum);
+}
+else{
+	alert("100이하 정수 숫자값만 입력하세요.");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px dotted red;"></canvas>
+<!-- canvas태그는 html5에서 추가된 태그로 그림을 그릴 때 도화지를 제공 -->
+<script>
+var canvas=document.getElementById('myCanvas');//캔버스를 구함
+var context=canvas.getContext("2d");//2d는 이차원 그래픽
+context.fillStyle="#0f0";//채우기 색 설정
+context.fillRect(0,0,100,50);//좌상단 x,y좌표가 0,0에서 시작해서 너비가 100, 높이가 50인 채우기 색으로 채워진 사각형을 그린다.
+</script>
+</body>
+</html>

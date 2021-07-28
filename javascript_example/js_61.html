@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function onMouseIn(elem){
+	elem.style.border="2px solid red";//테두리  선 두께를 2픽셀, 실선, 선색을 빨강
+}
+
+function onMouseOut(elem){
+	elem.style.border='';//테두리를 없앰.
+}
+</script>
+</head>
+<body>
+<div style="background-color:yellow; width:200px;" onmouseover="onMouseIn(this);" onmouseout="onMouseOut(this);">
+<!-- this는 div를 가리킨다. -->
+마우스를 이 요소 위에 이동하세요.
+</div>
+</body>
+</html>

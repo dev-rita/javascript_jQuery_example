@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function chDrive(f){
+	if(f.a.checked == true){
+		alert(f.a.value);
+	}
+	
+	if(f.b.checked == true){
+		alert(f.b.value);
+	}
+	
+	if(f.c.checked){//==true
+		alert(f.c.value);
+	}
+}
+</script>
+</head>
+<body>
+<form>
+<h3>사용할 드라이브 선택:</h3>
+<input type="checkbox" name="a" value="A drive"/>a드라이브
+<input type="checkbox" name="b" value="B drive"/>b드라이브
+<input type="checkbox" name="c" value="C drive"/>c드라이브
+<br/><br/>
+<input type="button" value="확인" onclick="chDrive(this.form);"/>
+</form>
+</body>
+</html>

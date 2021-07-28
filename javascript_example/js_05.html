@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var x=(20>10);//true
+	y=(10>20);//false
+	
+	document.write("20>10:"+x+"<hr/>");
+	document.write("10>20:"+y+"<hr/>");
+	
+	var person;
+	alert(person);//변수만 선언하고 값을 대입하지 않으면 undefined 상태가 된다. 아직 값을 결정하지 않은 상태.
+	
+	var s="abc";
+	s='abc';//자바 스크립트에서는 문자열 값을"",''로 처리한다.
+	document.write("s="+s+"<hr/>");
+	s="그는 '슈퍼맨' 이라고 불린다.";//""문자열 안에 작은 따옴표 ''를 사용할 수 있다.
+	document.write("s="+s+"<hr/>");
+	s='그는 "슈퍼맨" 이라고 불린다.';
+	document.write(s);
+</script>
+</body>
+</html>

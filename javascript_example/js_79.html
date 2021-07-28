@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script>
+function ch(form){
+	for(i=0;i<form.job.length;i++){
+		if(form.job.options[i].selected){//==true가 생략됨
+			alert(form.job.options[i].text+"(이)가 선택됨.");//text속성은 브라우저 출력되는 목록항목이름을 반환
+		}
+	}
+}
+</script>
+</head>
+<body>
+<form>
+<h3>당신의 직업은?</h3>
+<select name="job" size="4" multiple><!-- size="4"는 브라우저에 출력되는 목록개수, multiple속성은 하나이상 복수개 동시 선택 가능하다. -->
+<option>개발자</option>
+<option>회사원</option>
+<option>사업가</option>
+<option>학생</option>
+<option>무직</option>
+</select>
+<hr/>
+<input type="button" value="확인" onclick="ch(this.form);"/>
+</form>
+</body>
+</html>

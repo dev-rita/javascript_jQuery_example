@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('#btn').click(function(){
+		alert($('#name').val());
+		//jQuery val()함수는 입력필드의 입력값을 가져온다. val()함수가 자바스크립트의 value속성과 역할이 같다.
+		return false;//데이터 폼 전송 안함(버튼을 눌러도 데이터가 안사라짐.)
+	});
+});
+</script>
+</head>
+<body>
+<form>
+이름:<input type="text" id="name" size="14"/>
+<hr/>
+<button id="btn">val()</button>
+</form>
+</body>
+</html>

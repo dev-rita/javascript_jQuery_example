@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"> </script>
+<script>
+$(document).ready(function(){
+	$('button').click(function(){
+		$('#t').animate({left:'100px'});//왼쪽에서 오른쪽으로 100픽셀 이동
+	});
+});
+</script>
+</head>
+<body>
+<img id="t" src="../Images/twitter.gif" alt="t" width="120" height="100" style="position:relative;"/>
+<hr/>
+<button>animate()</button>
+</body>
+</html>

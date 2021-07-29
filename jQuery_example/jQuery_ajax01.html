@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+div{
+width:180px;
+height:80px;
+margin:3px;
+float:left;
+}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){//(document).ready 생략가능
+	$('#menu01').click(function(){
+		$('#message01').load('menu.html');//load() jQuery 아작스 함수로 menu.html을 비동기식으로 로드 실행
+		return false;
+	});
+	
+	$('#menu02').click(function(){
+		$('#message02').load('menu.html li');//menu.html에서 li태그 요소를 로드 실행
+	});
+});
+</script>
+</head>
+<body>
+<div>
+<a href="#" id="menu01">메뉴 보기01</a><p>
+<span id="message01"></span><!-- 여기에 비동기식을 전달된 데이터가 출력 -->
+</div>
+
+<div>
+<a href="#" id="menu02">메뉴 보기02</a><p>
+<span id="message02"></span>
+</div>
+</body>
+</html>

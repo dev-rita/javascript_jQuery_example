@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('#attr_btn').click(function(){
+		$('#dog').attr('alt','멍멍이');//alt속성값 변경 못불러 왔을 시 twitter 출력
+	});
+});
+</script>
+</head>
+<body>
+<img src="dog.jpg" id="dog" width="120" height="80" alt="강아지"/>
+<!-- 해당파일을 못불러오게 경로를 설정 -->
+<hr/>
+<input type="button" value="attr()함수로 속성값 변경" id="attr_btn"/>
+</body>
+</html>

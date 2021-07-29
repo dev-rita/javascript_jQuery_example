@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<style>
+p{
+background-color:yellow;
+}
+
+.container{
+width:200px; height:80px; border:1px dotted red;
+}
+</style>
+<script>
+$(document).ready(function(){
+	$('#btn01').click(function(){
+		$(".container").remove();//remove()함수는 선택된 요소와 그 자식(태그 안에 있는 태그) 요소를 삭제한다.
+	});
+});
+
+jQuery(document).ready(function(){//$대신 jQuery를 입력해도 된다.
+	$('#btn02').click(function(){
+		$(".container").empty();//empty()함수는 선택된 요소의  자식(태그 안에 있는 태그) 요소를 삭제한다.
+	});
+});
+</script>
+</head>
+<body>
+<input type="button" value="remove()" id="btn01"/>
+<input type="button" value="empty()" id="btn02"/>
+<hr/>
+<div class="container">
+<p>hello!</p>
+<p>goodbye!</p>
+</div><!-- id선택자가 큰 레이아웃을 그리게 된다. 안쪽에는 반복적인 선택자(또는 작은 레이아웃)라면 class를 사용한다. -->
+</body>
+</html>

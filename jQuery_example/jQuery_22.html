@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<style>
+div{
+width:70px; height:50px; float:left; /*복수개의 div수직정렬을 수평정렬로 배치*/
+margin:5px; background:red;
+}
+
+.next{
+background:blue;
+}
+</style>
+<script src="../js/jquery.js"></script>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+
+<script>
+$(document).ready(function(){
+	$modWidth=70;//$modWidth는 jQuery 변수이다.
+	$('div').click(function(){
+		$modWidth -=8;//너비가 8픽셀 씩 감소
+		$(this).width($modWidth).addClass('next')//메소드 체이닝 방법
+		//this는 div를 가리킨다.
+	});
+});
+</script>
+</body>
+</html>

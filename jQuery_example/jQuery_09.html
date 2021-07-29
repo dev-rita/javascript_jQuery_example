@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('#fadeIn').click(function(){
+		$('#t').fadeIn('slow');//jQuery fadeIn()함수는 해당 요소를 보이게 한다.
+	});
+	$('#fadeOut').click(function(){
+		$('#t').fadeOut('slow');//jQuery fadeOut()함수는 해당 요소를 사라지게 한다.
+	});
+});
+</script>
+</head>
+<body>
+<button id="fadeIn">fadeIn()</button>
+<button id="fadeOut">fadeOut()</button>
+<hr/>
+<img src="../Images/twitter.gif" width="120" height="120" alt="t" id="t" style=" position:relative;"/>
+<!-- display:none; 해당영역을 안보이게 하고 자리도 차지하지 않는다. -->
+</body>
+</html>

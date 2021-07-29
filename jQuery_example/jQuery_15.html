@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('#name_btn').click(function(){
+		$('#name').val('이름을 다시 입력하세요!');
+	});
+});
+</script>
+</head>
+<body>
+<form>
+이름:<input type="text" id="name" size="24"/>
+<hr/>
+<input type="button" value="입력필드 초기값 설정" id="name_btn"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+</head>
+<body>
+<button>Show Bird</button><hr/>
+<img id="bird" src="../Images/twitter.gif" width="120" height="100" alt="새" style="display:none;"/>
+<!-- css로 해당 새 이미지를 숨김 -->
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#bird").show("slow");//해당 영역을 jQuery show()함수로 보이게 한다.
+	});
+});
+</script>
+</body>
+</html>

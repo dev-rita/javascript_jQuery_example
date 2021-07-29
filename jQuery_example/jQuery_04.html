@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<style>
+body{
+	background-color:#eef;
+}
+div{
+	padding:20px;
+}
+</style>
+</head>
+<body>
+<div id="log"></div>
+<script>
+$(document).mousemove(function(e){//마우스를 움직인 이벤트 정보가 e매개변수로 전달됨.
+	$('#log').text("x좌표:"+e.pageX+",y좌표:"+e.pageY);
+});
+</script>
+</body>
+</html>

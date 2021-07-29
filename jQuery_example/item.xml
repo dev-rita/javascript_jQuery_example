@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<items>
+<item id="1" name="체리">
+<price>5000</price>
+<des>체리는 맛이 단 성분이 많고 피로회복에 잘 듣는다.</des>
+</item>
+
+<item id="2" name="수박">
+<price>15000</price>
+<des>수분이 풍부한 과일이다.</des>
+</item>
+</items>

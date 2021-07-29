@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<style>
+div.out{
+width:200px; height:100px; background-color:yellow;
+}
+</style>
+</head>
+<body>
+<div class="out">
+<p>마우스를 여기로 움직여 보세요.</p>
+<p>0</p>
+</div>
+<script>
+var i=0;
+$('div.out').mouseover(function(){
+	$('p:first',this).text("mouse over");
+	//p:first(=this)는 p태그의 첫 번째 요소를 가리킴. text() jQuery함수()내에 인자값이 있으면 인자값으로 문자를 해당 영역에 변경적용한다.
+	$('p:last',this).text(++i);//p:last(=this)는 p태그 마지막 요소
+});
+</script>
+</body>
+</html>

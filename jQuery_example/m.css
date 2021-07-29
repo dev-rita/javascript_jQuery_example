@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+#page{
+	width:960px; padding:5px; margin:20px auto;
+}
+
+#header{
+	height:50px;
+}
+
+#main{
+	width:600px; float:left;
+}
+
+#sidebar{
+	width:300px; float:right;
+}
+
+#footer{
+	clear:both;/*float속성을 제거해 잘못된 ui배치를 막아준다.*/
+}
+
+@media screen and (max-width:980px){/*미디어 타입이 스크린이고 최대 너비가 980픽셀이면*/
+	#page{
+		width:94%;/*상대적 크기*/
+	}
+	
+	#main{
+		width:65%;
+	}
+	
+	#sidebar{
+		width:30%;
+	}
+}
+
+@media screen and (max-width:700px){/*최대 너비가 700픽셀이면*/
+	#page{
+		width:auto; float:none;/*float속성을 제거해서 수평으로 배치된 레이아웃을 수직으로 배치한다.*/
+	}
+	
+	#sidebar{
+		width:auto; float:none;
+	}
+}
+
+@media screen and (max-width:480px){
+	#header{
+		width:auto;
+	}
+	
+	h2{
+		font-size:12px;
+	}
+	
+	#sidebar{
+		display:none;/*디스플레이를 하지않아 자리차지도 안한다.*/	
+	}
+}
+
+#header, #main, #sidebar, #footer{
+	border:1px solid red;
+}
+
+#header{
+	background-color:yellow;
+}
+
+#main{
+	background-color:aliceblue;
+}
+
+#sidebar{
+	background-color:aqua;
+}
+
+#footer{
+	background-color:coral;
+}

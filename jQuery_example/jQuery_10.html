@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('#slideDown').click(function(){
+		$('#t').slideDown('slow');//jQuery slideDown()함수는 해당 요소를 천천히 밀어 내린다.
+	});
+	
+	$('#slideUp').click(function(){
+		$('#t').slideUp('slow');//jQuery slideUp()함수는 해당 요소를 천천히 밀어 올린다.
+	});
+});
+</script>
+</head>
+<body>
+<input type="button" value="slideDown()" id="slideDown"/>
+<input type="button" value="slideUp()" id="slideUp"/>
+<hr/>
+<img src="../Images/twitter.gif" width="200" height="150" alt="t" id="t" style="display:none; position:relative;"/>
+</body>
+</html>

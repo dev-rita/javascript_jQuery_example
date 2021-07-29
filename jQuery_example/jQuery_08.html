@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('#btn_result').click(function(){
+		$('#t').animate({
+			left:'100px',
+			opacity:'0.5',//투명도 조절
+			width:'150px',//너비가 150px로 변경
+		});
+	});
+});
+</script>
+</head>
+<body>
+<input type="button" value="이미지변경" id="btn_result"/>
+<hr/>
+<img src="../Images/twitter.gif" id=t width="100px" height="80px" alt="t" style="position:relative;"/>
+</body>
+</html>

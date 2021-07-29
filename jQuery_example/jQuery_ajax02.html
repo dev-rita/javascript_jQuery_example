@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+div{
+width:200px; height:80px;
+margin:3px; float:left;
+}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$('#menu01').click(function(){
+		$.ajax({
+			url:'menu.html',//서버 파일 경로
+			dataType:'html',//받아오는 자료형식
+			success:function(data){//받아오는 것이 성공시 호출되는 콜백 함수. 비동기식으로 받아온 자료는 data매개변수에 저장됨.
+				$('#result01').html(data);//해당 영역에 태그와 문자를 함께 변경 적용
+			}
+		});
+		return false;
+	});
+	
+	$('#menu02').click(function(){
+		$.ajax({
+			url:'menu.html',
+			dataType:"html",
+			success:function(data){
+				$("#result02").html($(data).find('li'));//menu.html에서 li태그 요소만 가져와서 태그와 문자를 함께 변경 적용	
+			}
+		});
+		return false;
+	});
+});
+</script>
+</head>
+<body>
+<div>
+<a href="#" id="menu01">메뉴보기01</a><p>
+<span id="result01"></span><!-- 여기에 비동기식을 전달된 데이터가 출력 -->
+</div>
+
+<div>
+<a href="#" id="menu02">메뉴보기02</a><p>
+<span id="result02"></span>
+</div>
+</body>
+</html>

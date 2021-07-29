@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<style>
+div{
+width:60px; height:60px;
+}
+</style>
+</head>
+<body>
+<div id="div01" style="background-color:blue;"></div> 
+<script>
+$(document).ready(function(){
+	$('#btn01').click(function(){
+		$('#div01').css("background-color","blue");
+		$color=$('#div01').css("background-color");//css() 함수로 배경색 속성값을 가져온다.
+		$('#result').text("background-color:"+$color);
+	});
+	
+	$('#btn02').click(function(){
+		$('#div01').css("background-color","red");//배경색을 빨강으로 변경
+		$color=$('#div01').css("background-color");
+		$('#result').text("background-color:"+$color);
+	});
+});
+</script>
+<button id="btn01">css함수01(파란색)</button>
+<button id="btn02">css함수02(빨강색)</button>
+<hr/>
+<p id="result">여기에 결과가 표시</p>
+</body>
+</html>

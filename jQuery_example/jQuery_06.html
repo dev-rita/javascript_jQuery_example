@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+</head>
+<body>
+<input type="button" value="toggle()함수" id="btn"/>
+<hr/>
+<img src="../Images/twitter.gif" id="v" width="150" height="130" alt="트위터"/>
+<script>
+$(document).ready(function(){
+	$('#btn').click(function(){
+		$('#v').toggle();//jQuery toggle()함수는 해당 요소가 감추어져 있으면 보이고 표시되어 있으면 감춘다
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('#text').click(function(){
+		$('#target').text("안녕하세요.");//text(인자값)함수는 인자값으로 해당영역의 문자를 변경 적용
+	});
+	
+	$('#html').click(function(){
+		$('#target').html("<strong>안녕하세요?</strong>");//html(태그와문자 인자값)함수는 태그와 문자 인자값으로 변경 적용
+	});
+});
+</script>
+</head>
+<body>
+<span id="target">여기에 변경적용</span>
+<hr/>
+<input type="button" value="text()" id="text"/>
+<input type="button" value="html()" id="html"/>
+</body>
+</html>

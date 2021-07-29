@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('#btn01').click(function(){
+		$('p').append("<b style='color:red;'>Hello!</b>");
+		//jQuery apeend()함수에 의해서 선택된 p태그요소 끝에 새로운 내용을 추가한다.	
+	});
+	
+	$('#btn02').click(function(){
+		$('p').prepend("<strong style='color:blue;'>jQuery !</strong>");
+		//prepend()함수에 의해서 선택된 요소의 처음에 새로운 내용을 추가
+	});
+});
+</script>
+</head>
+<body>
+<p> I would like to say:</p>
+<hr/>
+<button id="btn01">append()</button>
+<button id="btn02">prepend()</button>
+</body>
+</html>

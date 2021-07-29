@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>$.post 비동기식 jQuery 아작스</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$('#submit').click(function(){
+		$username=$(".name").val();//val()함수로 입력필드 입력값을 가져온다.
+		$sendData='name2='+$username;//name2 파라미터 이름에 이름을 담아서 전달한다.
+		
+		$.post(
+			'result.jsp',//서버 파일 경로
+			$sendData,//보낼 자료
+			function(data){
+				//비동기식 아작스로 받아오는 것이 성공 시 호출되는 콜백함수, 받아온 자료는 data매개변수에 저장됨.
+				$('#re').html(data);//re 아이디 영역에 태그와 문자를 변경적용
+			}
+			);
+		return false;
+	});
+});
+</script>
+</head>
+<body>
+<form>
+<label>이름입력:</label>
+<input type="text" class="name" size="14"><br/><br/>
+<input type="button" id="submit" value="전송"/>
+</form>
+<hr/>
+<div id="re"></div><!-- 해당 영역에 비동기식으로 가져온 자료가 출력된다. -->
+</body>
+</html>

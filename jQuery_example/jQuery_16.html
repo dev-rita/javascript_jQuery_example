@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('#btn_image').click(function(){
+		alert($('#t').attr("src"));//attr()함수로 src속성값을 가져옴.
+	})
+});
+</script>
+</head>
+<body>
+<img src="../Images/twitter.gif" id="t" alt="t" width="120" height="100"/>
+<hr/>
+<button id="btn_image">attr()</button>
+</body>
+</html>

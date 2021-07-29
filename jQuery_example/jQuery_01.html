@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript" src="../js/jquery.js"></script><!-- jQuery라이브러리 불러옴 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	//문서가 준비되었다면, $대신 jQuery를 사용해도 된다.
+	jQuery("h2").click(function(){//h2태그 요소 클릭 이벤트 발생시 실행
+		$(this).hide();//this는 h2를 가리킴. jQuery hide()함수로 해당 영역을 숨김
+	});
+});
+</script>
+</head>
+<body>
+<h2>여기를 클릭하면 사라집니다.</h2>
+</body>
+</html>

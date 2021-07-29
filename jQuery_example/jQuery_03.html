@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$('#id').focus(function(){
+		$(this).css("background-color","yellow");//배경색을 노랑
+	});
+	$('#id').blur(function(){//focus를 잃었을 때 
+		$(this).css("background","white");//배경색을 흰색
+	});
+});
+</script>
+</head>
+<body>
+<form>
+아이디:<input type="text" id="id" size="20"/>
+</form>
+</body>
+</html>

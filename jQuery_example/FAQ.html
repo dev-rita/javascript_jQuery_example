@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자주 묻는 질문</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$.fn.extend({
+	 faq:function(){
+		var ts =$(this);
+		$.each(ts,function(i,o){//faq플러그인을 적용한 요소의 개수만큼 함수를 실행함
+			$("button",o).on("click",tabmenu);//faq 플러그인을 적용한 요소(o)에 포함되어 있는 버튼에 클릭 이벤트를 등록
+			function tabmenu(){
+				if($(this).parent().next().is(":hidden")){
+					$("li>div:visible",o).hide();
+					$(this).parent().next().show();
+				}else{
+					$("li>div:visible",o).hide();
+				}
+			}
+		});
+	 }
+ });
+	$(".faq").faq();
+});
+</script>
+<style>
+li {
+	list-style: none;
+}
+
+li>div {
+	display:none;
+}
+
+.cont{
+	display:inline;
+	background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h1>좋아하는 것 관련</h1>
+<div class="faq">
+	<ul>
+	 <li>
+	  <p><button>Q1. 좋아하는 색깔은?</button></p>
+	  <div>
+	   <div class="cont">노랑색, 남색, 보라색 입니다.</div>
+	  </div>
+	 </li>
+	 <li>
+	  <p><button>Q2. 좋아하는 과일은?</button></p>
+	  <div>
+	   <div class="cont"> 딸기, 바나나, 체리, 골드키위, 망고입니다.</div>
+	  </div>
+	 </li>
+	</ul>
+</div>
+<h1>흥미있는 것 관련</h1>
+<div class="faq">
+	<ul>
+	 <li>
+	  <p><button>Q1. 흥미있는 분야는?</button></p>
+	  <div>
+	   <div class="cont">코딩 입니다.</div>
+	  </div>
+	 </li>
+	  <li>
+	  <p><button>Q2. 흥미있는 활동은?</button></p>
+	  <div>
+	   <div class="cont">산책, 여행 입니다.</div>
+	  </div>
+	 </li>
+	</ul>
+</div>
+</body>
+</html>

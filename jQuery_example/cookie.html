@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3일동안 이창 열지 않기</title>
+<script src="../js/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" 
+integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+$(function(){
+	if($.cookie("popup") =="none"){
+		$("#notice").hide();
+		//쿠키("popup")의 값이 "none"이면 id값이 "notice"인 요소를 숨긴다.
+	}
+	
+	var $expChk = $("#expiresChk");
+	$(".closeBtn").on("click",closePop);
+	
+	function closePop(){
+		if($expChk.is(":checked")){
+			$.cookie("popup","none",{expires:3,path:"/"});
+			//".closeBtn"버튼을 클릭하면 체크박스의 체크 유무에 따라 쿠키를 생성해 3일간 저장
+		}
+		$("#notice").fadeOut("fast");
+	}
+});
+</script>
+</head>
+<body>
+<div id="notice">
+<img src="../Images/icon1.png" alt="공지사진">
+<p class="close">
+	<input type="checkbox" name="expiresChk" id="expiresChk">
+	<label for="expiresChk">3일동안 이 창 열지 않기</label>
+	<button class="closeBtn">닫기</button>
+</p>
+</div>
+</body>
+</html>
